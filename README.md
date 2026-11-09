@@ -31,7 +31,17 @@ pnpm test
 pnpm lint
 ```
 
-لبناء تطبيق أصلي للنشر، اربط المشروع بحساب Expo واستخدم EAS Build بعد مراجعة إعدادات الحزم والتوقيعات الخاصة بمنصتك. تصدير Metro وحده لا ينشئ ملف متجر.
+## EAS Build
+
+يوجد ملف [`eas.json`](./eas.json) في جذر المشروع. من مجلد المشروع نفسه (المجلد الذي يحتوي `package.json` و`eas.json`)، سجّل الدخول مرة واحدة واربط المشروع بحساب Expo إذا طُلب ذلك، ثم أنشئ APK داخليًا للتجربة أو بناءً إنتاجيًا:
+
+```bash
+npx eas-cli login
+npx eas-cli build --platform android --profile preview
+npx eas-cli build --platform android --profile production
+```
+
+ملف `preview` يخرج APK للتثبيت الداخلي، أما `production` فيستخدم إعداد Android الافتراضي الملائم للمتجر ويزيد رقم البناء تلقائيًا. يتطلب النشر توقيعات Android أو إعداد حساب Apple وملفاته على iOS؛ إضافة `eas.json` تحل خطأ غياب الإعداد لكنها لا تنشئ بيانات اعتماد المتاجر. تصدير Metro وحده لا ينشئ ملف متجر.
 
 ## الشبكات والتوافر
 
