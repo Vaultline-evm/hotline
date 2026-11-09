@@ -14,7 +14,7 @@
 - [x] Preserve source multiple-wallet management while storing each private key in a separate native secure-store slot.
 - [x] Document realistic local-key security guarantees and the public address/transaction data visible to RPC/explorer providers.
 - [x] Gate signing on an open review sheet and a fresh fee estimate, with deterministic tests.
-- [ ] Push the current Vaultline project to GitHub repository Vaultline-evm/hotline after safely reconciling the remote contents.
+- [x] Push the current Vaultline project to GitHub repository Vaultline-evm/hotline after safely reconciling the remote contents.
 - [x] Replace the starter README with Vaultline-specific setup, platform, network and security notes for GitHub readers.
 - [x] Remove sandbox-specific absolute paths from documentation and public scaffold comments before pushing to the public repository.
 - [x] Ignore root .env and .env.* files in Git while allowing a safe .env.example before publishing.
