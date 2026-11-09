@@ -37,11 +37,12 @@ pnpm lint
 
 ```bash
 npx eas-cli login
+npx eas-cli build --platform android --profile internal
 npx eas-cli build --platform android --profile preview
 npx eas-cli build --platform android --profile production
 ```
 
-ملف `preview` يخرج APK للتثبيت الداخلي، أما `production` فيستخدم إعداد Android الافتراضي الملائم للمتجر ويزيد رقم البناء تلقائيًا. يتطلب النشر توقيعات Android أو إعداد حساب Apple وملفاته على iOS؛ إضافة `eas.json` تحل خطأ غياب الإعداد لكنها لا تنشئ بيانات اعتماد المتاجر. تصدير Metro وحده لا ينشئ ملف متجر.
+ملفا `internal` و`preview` يخرجان APK للتثبيت الداخلي؛ ويورث `internal` إعداداته من `preview`. أما `production` فيستخدم إعداد Android الافتراضي الملائم للمتجر ويزيد رقم البناء تلقائيًا. يتطلب النشر توقيعات Android أو إعداد حساب Apple وملفاته على iOS؛ إضافة `eas.json` تحل خطأ غياب الإعداد لكنها لا تنشئ بيانات اعتماد المتاجر. تصدير Metro وحده لا ينشئ ملف متجر.
 
 ## الشبكات والتوافر
 
