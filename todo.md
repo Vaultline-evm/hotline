@@ -20,3 +20,4 @@
 - [x] Ignore root .env and .env.* files in Git while allowing a safe .env.example before publishing.
 - [x] Remove inherited trailing whitespace from the starter auth test before commit.
 - [x] Add EAS build profiles in eas.json and publish the fix to Vaultline-evm/hotline.
+- [x] Add an EAS `internal` build profile to resolve the reported `eas build:internal` failure and sync the correction to GitHub.
