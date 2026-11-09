@@ -1,0 +1,21 @@
+# Project TODO
+
+- [x] Inspect source HTML and record exact chains, assets, symbols, fee rules, transaction history fields, and wallet flows.
+- [x] Replace address-based setup with private-key-only onboarding and local public-address derivation.
+- [x] Store the private key only in native OS secure storage; prevent logging, analytics, server, and database transmission.
+- [x] Recreate Vaultline wallet overview and asset list in Arabic RTL mobile layout.
+- [x] Recreate receive flow with derived address and QR display.
+- [x] Recreate send flow with matching fee calculation and a mandatory pre-sign review of fee breakdown and total debit.
+- [x] Sign transactions locally and broadcast only the signed payload; clearly warn that broadcasting is visible to the selected RPC provider/network.
+- [x] Recreate transaction history and status/details behavior from source.
+- [x] Add custom Vaultline launcher/splash/favicon brand assets and update app branding config.
+- [x] Add deterministic tests for address derivation, source fee-calculation parity, validation and pre-sign review gating.
+- [x] Run TypeScript, lint and tests; document native vs web security limitations and Expo run/build steps.
+- [x] Preserve source multiple-wallet management while storing each private key in a separate native secure-store slot.
+- [x] Document realistic local-key security guarantees and the public address/transaction data visible to RPC/explorer providers.
+- [x] Gate signing on an open review sheet and a fresh fee estimate, with deterministic tests.
+- [ ] Push the current Vaultline project to GitHub repository Vaultline-evm/hotline after safely reconciling the remote contents.
+- [x] Replace the starter README with Vaultline-specific setup, platform, network and security notes for GitHub readers.
+- [x] Remove sandbox-specific absolute paths from documentation and public scaffold comments before pushing to the public repository.
+- [x] Ignore root .env and .env.* files in Git while allowing a safe .env.example before publishing.
+- [x] Remove inherited trailing whitespace from the starter auth test before commit.
