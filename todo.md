@@ -21,3 +21,5 @@
 - [x] Remove inherited trailing whitespace from the starter auth test before commit.
 - [x] Add EAS build profiles in eas.json and publish the fix to Vaultline-evm/hotline.
 - [x] Add an EAS `internal` build profile to resolve the reported `eas build:internal` failure and sync the correction to GitHub.
+- [ ] Retrieve authenticated EAS logs for Android build 877c9a16-a123-4ee7-8309-c1da6ff893cc to confirm or revise the repository-based production build fix.
+- [x] Diagnose and fix the failed Android production EAS build using repository files only, without browser access, then push to GitHub.
