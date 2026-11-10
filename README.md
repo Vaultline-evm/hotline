@@ -42,7 +42,7 @@ npx eas-cli build --platform android --profile preview
 npx eas-cli build --platform android --profile production
 ```
 
-ملفا `internal` و`preview` يخرجان APK للتثبيت الداخلي؛ ويورث `internal` إعداداته من `preview`. أما `production` فيستخدم إعداد Android الافتراضي الملائم للمتجر ويزيد رقم البناء تلقائيًا. يتطلب النشر توقيعات Android أو إعداد حساب Apple وملفاته على iOS؛ إضافة `eas.json` تحل خطأ غياب الإعداد لكنها لا تنشئ بيانات اعتماد المتاجر. تصدير Metro وحده لا ينشئ ملف متجر.
+ملفا `internal` و`preview` يخرجان APK للتثبيت الداخلي؛ ويورث `internal` إعداداته من `preview`. أما `production` فيستخدم مصدر أرقام إصدار بعيدًا (`cli.appVersionSource: remote`)، ويزيد رقم البناء تلقائيًا، ويحدد Android App Bundle (`.aab`) للمتجر. تحديد المصدر صراحةً يمنع توقف EAS بانتظار اختيار تفاعلي عند استخدام `autoIncrement` [1]. إذا كان التطبيق قد نُشر سابقًا، زامن رقم البناء الحالي إلى EAS قبل تفعيل المصدر البعيد [2]. يتطلب النشر بيانات اعتماد Android أو إعداد حساب Apple وملفاته على iOS؛ `eas.json` لا ينشئ بيانات اعتماد المتاجر. تصدير Metro وحده لا ينشئ ملف متجر.
 
 ## الشبكات والتوافر
 
@@ -51,3 +51,8 @@ npx eas-cli build --platform android --profile production
 ## نموذج الأمان
 
 يشرح [`SECURITY.md`](./SECURITY.md) مواقع التخزين والبيانات التي قد يراها مزود RPC أو مستكشف السجل وحدود الحماية. المشروع نموذج أولي غير مدقق أمنيًا مستقلًا؛ لا تستورد مفتاحًا يحتوي أصولًا حقيقية قبل مراجعة الكود وتجربته على جهاز احتياطي. لا تشارك المفتاح الخاص أو تضعه في Issues أو سجلات CI أو إعدادات عامة للمستودع.
+
+## المراجع
+
+[1]: https://docs.expo.dev/eas/json/ — EAS JSON configuration.
+[2]: https://docs.expo.dev/build-reference/app-versions/ — App version management.
